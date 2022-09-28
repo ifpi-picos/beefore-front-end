@@ -14,7 +14,7 @@ main {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     width: 35vw;
-    height: 65vh;
+    height: 75vh;
     background-color: var(--primary);
     text-align: center;
     color: #FFFFFF;
@@ -33,13 +33,13 @@ main {
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     width: 45vw;
-    height: 65vh;
+    height: 75vh;
     background-color: #FFFFFF;
     color: var(--primary)
 }
 
 #form-title {
-    font-size: 5em;
+    font-size: 3em;
 }
 
 .side-login-register form {
@@ -56,28 +56,29 @@ main {
 }
 
 .side-login-register form input {
-    padding-left: 85px;
+    padding-left: 60px;
     font-size: large;
     font-weight: 400;
     margin: 5px;
     border: none;
-    width: 25em;
-    height: 5em;
+    width: 100%;
+    height: 3em;
 }
 
 #input-email {
     background: url(/assets/Icon-Email.png) no-repeat scroll 10px;
     background-color: var(--background);
-    background-size: 15%;
+    background-size: 10%;
 }
 
 #input-senha {
     background: url(/assets/Icon-Cadeado.png) no-repeat scroll 10px;
     background-color: var(--background);
-    background-size: 15%; 
+    background-size: 10%; 
 }
 
 .side-login-register button {
+    
     width: 10em;
     height: 3em;
     font-size: large;
@@ -112,4 +113,98 @@ main {
     background-color: var(--primary);
     color: #FFFFFF;
     transition: ease-in-out 0.2s;
+}
+
+@media(max-width: 760px){
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    section{
+        width: 50%;
+    }
+    .side-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 0px;
+        width: 90vw;
+        height: 40vh;
+        background-color: var(--primary);
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .side-logo img {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .side-login-register {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        width: 90vw;
+        height: 60vh;
+        background-color: #FFFFFF;
+        color: var(--primary)
+    }
+    .side-login-register, #form-title {
+        font-size: 50px;
+    }
+    .side-login-register form input {
+        padding-left: 60px;
+        font-size: large;
+        font-weight: 400;
+        margin: 5px;
+        border: none;
+        width: 100%;
+        height: 3em;
+    }
+    .side-login-register button {
+        display: flex;
+        justify-content: center;
+        width: 10em;
+        height: 3em;
+        font-size: large;
+        font-weight: bold;
+        margin: 5px;
+        border-radius: 20px;
+        box-shadow: rgb(128, 128, 128) 7px 7px 15px;
+    }
+    
+    #button-login {
+        background-color: var(--primary);
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: ease-in-out 0.2s;
+        opacity: 100%;
+    }
+    
+    #button-criar-conta {
+        background-color: #FFFFFF;
+        cursor: pointer;
+        transition: ease-in-out 0.2s;
+        opacity: 100%;
+    }
+    #button-login:hover {
+        background-color: #FFFFFF;
+        color: var(--primary);
+        transition: ease-in-out 0.2s;
+    }
+    
+    #button-criar-conta:hover {
+        background-color: var(--primary);
+        color: #FFFFFF;
+        transition: ease-in-out 0.2s;
+    }
+    
 }
