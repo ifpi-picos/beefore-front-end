@@ -39,7 +39,7 @@ main {
 }
 
 #form-title {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .side-login-register form {
@@ -47,7 +47,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 .side-login-register .form-field {
@@ -57,12 +58,12 @@ main {
 
 .side-login-register form input {
     padding-left: 60px;
-    font-size: large;
+    font-size: medium;
     font-weight: 400;
     margin: 5px;
     border: none;
     width: 100%;
-    height: 3em;
+    height: 2.5em;
 }
 
 #input-email {
@@ -79,10 +80,10 @@ main {
 
 .side-login-register button {
     
-    width: 10em;
-    height: 3em;
-    font-size: large;
-    font-weight: bold;
+    width: 8em;
+    height: 2em;
+    font-size: medium;
+    font-weight: normal;
     margin: 5px;
     border-radius: 20px;
     box-shadow: rgb(128, 128, 128) 7px 7px 15px;
@@ -157,8 +158,8 @@ main {
         background-color: #FFFFFF;
         color: var(--primary)
     }
-    .side-login-register, #form-title {
-        font-size: 50px;
+    #form-title {
+        font-size: 2em;
     }
     .side-login-register form input {
         padding-left: 60px;
@@ -172,12 +173,13 @@ main {
     .side-login-register button {
         display: flex;
         justify-content: center;
-        width: 10em;
-        height: 3em;
+        width: 9em;
+        height: 2.5em;
         font-size: large;
         font-weight: bold;
+        padding-top: 12px;
         margin: 5px;
-        border-radius: 20px;
+        border-radius: 30px;
         box-shadow: rgb(128, 128, 128) 7px 7px 15px;
     }
     
