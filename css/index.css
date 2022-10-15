@@ -6,6 +6,17 @@ main {
     height: 100vh;
 }
 
+.first-content {
+    display: flex;
+    position: relative;
+}
+
+.second-content {
+    display: flex;
+    position: absolute;
+    display: none;
+}
+
 .side-logo {
     display: flex;
     flex-direction: column;
@@ -35,7 +46,8 @@ main {
     width: 45vw;
     height: 75vh;
     background-color: #FFFFFF;
-    color: var(--primary)
+    color: var(--primary);
+    position: relative;
 }
 
 #form-title {
@@ -80,6 +92,103 @@ main {
 
 .side-login-register button {
     
+    width: 8em;
+    height: 2em;
+    font-size: medium;
+    font-weight: normal;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: rgb(128, 128, 128) 7px 7px 15px;
+}
+
+#button-login {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    opacity: 100%;
+}
+
+#button-criar-conta {
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    opacity: 100%;
+}
+
+#button-login:hover {
+    background-color: #FFFFFF;
+    color: var(--primary);
+    transition: ease-in-out 0.2s;
+}
+
+#button-criar-conta:hover {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    transition: ease-in-out 0.2s;
+}
+
+.side-cadastro-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 45vw;
+    height: 75vh;
+    background-color: #FFFFFF;
+    color: var(--primary);
+    position: relative;
+}
+
+#form-title {
+    font-size: 2em;
+}
+
+.side-cadastro-register form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.side-cadastro-register .form-field {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-cadastro-register form input {
+    padding-left: 60px;
+    font-size: medium;
+    font-weight: 400;
+    margin: 5px;
+    border: none;
+    width: 100%;
+    height: 2.5em;
+}
+
+#input-nome {
+    background: url(/assets/Icon-Pessoa.png) no-repeat scroll 10px;
+    background-color: var(--background);
+    background-size: 10%;
+}
+
+#input-email {
+    background: url(/assets/Icon-Email.png) no-repeat scroll 10px;
+    background-color: var(--background);
+    background-size: 10%;
+}
+
+#input-senha {
+    background: url(/assets/Icon-Cadeado.png) no-repeat scroll 10px;
+    background-color: var(--background);
+    background-size: 10%; 
+}
+
+.side-cadastro-register button {   
     width: 8em;
     height: 2em;
     font-size: medium;
@@ -210,3 +319,4 @@ main {
     }
     
 }
+
