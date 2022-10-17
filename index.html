@@ -26,21 +26,41 @@
             </p>
         </aside>
         <aside class="side-login-register">
-            <div class="title">
-                <h1 id="form-title">Login</h1>
+            <div id="forms">
+                <div class="title">
+                    <h1 id="form-title">Login</h1>
+                </div>
+                <div>
+                    <form id="form-login">
+                        <input id="input-login-email" type="text" placeholder="Email" required>
+                        <input id="input-login-senha" type="password" placeholder="Senha" required>
+                    </form>
+                    <form id="form-criar-conta">
+                        <input id="input-criar-conta-nome" type="text" placeholder="Nome" required>
+                        <input id="input-criar-conta-cartao" type="text" placeholder="ID do Cartão" required>
+                        <input id="input-criar-conta-ocupacao" type="text" placeholder="Ocupação">
+                        <input id="input-criar-conta-email" type="text" placeholder="Email" required>
+                        <input id="input-criar-conta-senha" type="password" placeholder="Senha" required>
+                        <input id="input-criar-conta-confirmar-senha" type="password" placeholder="Repita a senha"
+                            required>
+                    </form>
+                </div>
+                <div>
+                    <button class="active-button" id="button-login" active="true">Login</button>
+                    <button class="unactive-button" id="button-criar-conta" active="false">Criar Conta</button>
+                </div>
             </div>
-            <div>
-                <form>
-                    <input id="input-email" type="text" placeholder="Email">
-                    <input id="input-senha" type="password" placeholder="Senha">
-                </form>
+            <div id="loading">
+                <div class="load-wheel"></div>
             </div>
-            <div>
-                <button id="button-login">Login</button>
-                <button id="button-criar-conta">Criar Conta</button>
+            <div class="response">
+                <h2 id="response-title"></h2>
+                <p id="response-text"></p>
+                <button id="button-confirm">Ok</button>
             </div>
         </aside>
     </main>
+    <script src="scripts/index/login-cadastro.js"></script>
 </body>
 
 </html>

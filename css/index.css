@@ -35,11 +35,19 @@ main {
     width: 45vw;
     height: 75vh;
     background-color: #FFFFFF;
-    color: var(--primary)
+    color: var(--primary);
+    position: relative;
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #form-title {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .side-login-register form {
@@ -47,7 +55,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 .side-login-register .form-field {
@@ -57,38 +66,26 @@ main {
 
 .side-login-register form input {
     padding-left: 60px;
-    font-size: large;
+    font-size: medium;
     font-weight: 400;
     margin: 5px;
     border: none;
     width: 100%;
-    height: 3em;
-}
-
-#input-email {
-    background: url(/assets/Icon-Email.png) no-repeat scroll 10px;
-    background-color: var(--background);
-    background-size: 10%;
-}
-
-#input-senha {
-    background: url(/assets/Icon-Cadeado.png) no-repeat scroll 10px;
-    background-color: var(--background);
-    background-size: 10%; 
+    height: 2.5em;
 }
 
 .side-login-register button {
-    
-    width: 10em;
-    height: 3em;
-    font-size: large;
-    font-weight: bold;
+    width: 8em;
+    height: 2em;
+    font-size: medium;
+    font-weight: normal;
     margin: 5px;
     border-radius: 20px;
-    box-shadow: rgb(128, 128, 128) 7px 7px 15px;
+    box-shadow: rgb(128, 128, 128) 5px 5px 15px;
+    border: 2px solid;
 }
 
-#button-login {
+#button-confirm {
     background-color: var(--primary);
     color: #FFFFFF;
     cursor: pointer;
@@ -96,36 +93,186 @@ main {
     opacity: 100%;
 }
 
-#button-criar-conta {
-    background-color: #FFFFFF;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-    opacity: 100%;
-}
-
-#button-login:hover {
+#button-confirm:hover {
     background-color: #FFFFFF;
     color: var(--primary);
     transition: ease-in-out 0.2s;
 }
 
-#button-criar-conta:hover {
+.side-cadastro-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 45vw;
+    height: 75vh;
+    background-color: #FFFFFF;
+    color: var(--primary);
+    position: relative;
+}
+
+#form-title {
+    font-size: 2em;
+}
+
+.side-cadastro-register form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.side-cadastro-register .form-field {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-cadastro-register form input {
+    padding-left: 60px;
+    font-size: medium;
+    font-weight: 400;
+    margin: 5px;
+    border: none;
+    width: 100%;
+    height: 2.5em;
+}
+
+#input-criar-conta-nome {
+    background: url(/assets/Icon-Pessoa.png) no-repeat scroll 10px;
+    background-color: var(--background);
+    background-size: 10%;
+}
+
+#input-criar-conta-cartao {
+    background: url(/assets/Icon-Cartao.png) no-repeat scroll 10px;
+    background-color: var(--background);
+    background-size: 10%;
+}
+
+#input-criar-conta-ocupacao {
+    background: url(/assets/Icon-Ocupacao.png) no-repeat scroll 10px;
+    background-color: var(--background);
+    background-size: 10%;
+}
+
+#input-login-email, #input-criar-conta-email {
+    background: url(/assets/Icon-Email.png) no-repeat scroll 10px;
+    background-color: var(--background);
+    background-size: 10%;
+}
+
+#input-login-senha, #input-criar-conta-senha, #input-criar-conta-confirmar-senha {
+    background: url(/assets/Icon-Cadeado.png) no-repeat scroll 10px;
+    background-color: var(--background);
+    background-size: 10%;
+}
+
+.side-cadastro-register button {
+    width: 8em;
+    height: 2em;
+    font-size: medium;
+    font-weight: normal;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: rgb(128, 128, 128) 7px 7px 15px;
+}
+
+.active-button {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    opacity: 100%;
+}
+
+.inactive-button {
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    opacity: 100%;
+}
+
+.active-button:hover {
+    background-color: #FFFFFF;
+    color: var(--primary);
+    transition: ease-in-out 0.2s;
+}
+
+.inactive-button:hover {
     background-color: var(--primary);
     color: #FFFFFF;
     transition: ease-in-out 0.2s;
 }
 
-@media(max-width: 760px){
+#form-criar-conta {
+    display: none;
+}
+
+.load-wheel {
+    border: 10px solid var(--primary);
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    animation: spin 2s linear infinite;
+}
+
+#loading {
+    display: none;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.response {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+
+.response p {
+    color: var(--text);
+    margin: 5px;
+    text-align: justify;
+}
+
+.response h2 {
+    color: var(--text);
+    margin: 5px;
+    text-align: center;
+}
+
+@media(max-width: 760px) {
     main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: max-content;
+        margin: 5px 0px 5px 0px;
     }
-    section{
+
+    section {
         width: 50%;
     }
+
     .side-logo {
         display: flex;
         flex-direction: column;
@@ -135,15 +282,18 @@ main {
         border-top-left-radius: 20px;
         border-bottom-left-radius: 0px;
         width: 90vw;
-        height: 40vh;
+        height: max-content;
         background-color: var(--primary);
         text-align: center;
         color: #FFFFFF;
+        padding: 10px;
     }
+
     .side-logo img {
         width: 50%;
         margin-bottom: 20px;
     }
+
     .side-login-register {
         display: flex;
         flex-direction: column;
@@ -153,13 +303,16 @@ main {
         border-bottom-left-radius: 20px;
         border-top-right-radius: 0px;
         width: 90vw;
-        height: 60vh;
+        height: max-content;
+        padding: 10px;
         background-color: #FFFFFF;
         color: var(--primary)
     }
-    .side-login-register, #form-title {
-        font-size: 50px;
+
+    #form-title {
+        font-size: 2em;
     }
+
     .side-login-register form input {
         padding-left: 60px;
         font-size: large;
@@ -169,42 +322,17 @@ main {
         width: 100%;
         height: 3em;
     }
+
     .side-login-register button {
         display: flex;
         justify-content: center;
-        width: 10em;
-        height: 3em;
+        width: 9em;
+        height: 2.5em;
         font-size: large;
         font-weight: bold;
+        padding-top: 12px;
         margin: 5px;
-        border-radius: 20px;
-        box-shadow: rgb(128, 128, 128) 7px 7px 15px;
+        border-radius: 30px;
+        box-shadow: rgb(128, 128, 128) 5px 5px 15px;
     }
-    
-    #button-login {
-        background-color: var(--primary);
-        color: #FFFFFF;
-        cursor: pointer;
-        transition: ease-in-out 0.2s;
-        opacity: 100%;
-    }
-    
-    #button-criar-conta {
-        background-color: #FFFFFF;
-        cursor: pointer;
-        transition: ease-in-out 0.2s;
-        opacity: 100%;
-    }
-    #button-login:hover {
-        background-color: #FFFFFF;
-        color: var(--primary);
-        transition: ease-in-out 0.2s;
-    }
-    
-    #button-criar-conta:hover {
-        background-color: var(--primary);
-        color: #FFFFFF;
-        transition: ease-in-out 0.2s;
-    }
-    
 }
