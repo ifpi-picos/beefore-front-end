@@ -1,4 +1,4 @@
-const apiURL = document.location.host != "beefore.netlify.app" ? "http://localhost:3001" : ""
+const apiURL = document.location.host != "beefore.netlify.app" ? "http://localhost:3001" : "https://beefore.onrender.com"
 const buttonLogin = document.getElementById("button-login")
 const buttonCriarConta = document.getElementById("button-criar-conta")
 
