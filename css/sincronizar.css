@@ -1,0 +1,72 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.side-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 35vw;
+    height: 75vh;
+    background-color: var(--primary);
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.side-logo img {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.side-sincronizar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 45vw;
+    height: 75vh;
+    background-color: #FFFFFF;
+    color: var(--primary);
+    position: relative;
+}
+
+.side-sincronizar form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-sincronizar form input {
+    width: 4rem;
+    height: 5rem;
+    margin: 5px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--primary);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
