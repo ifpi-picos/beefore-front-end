@@ -16,19 +16,24 @@ function getCookie(cname) {
     return "";
 }
 
-fetch(apiURL + "/auth/token", {
-    method: "POST",
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        token: getCookie("token")
-    })
-})
-    .finally(res => {
-        if (res.status != 100) {
-            document.location.href = "/"
-            document.cookie = "token=; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+const token = getCookie("token")
+
+if (token) {
+    fetch(apiURL + "/auth/token", {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `${token}`
         }
     })
+        .then(res => {
+            if (res.status != 200) {
+                document.location.href = "/"
+                document.cookie = "token=; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+            }
+        })
+}
+else {
+    document.location.href = "/"
+}

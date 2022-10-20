@@ -10,20 +10,39 @@ fields.forEach((field, index) => {
             else {
                 field.value = event.key
             }
-            
+
             if (fields.length > index + 1) {
                 fields[index + 1].focus()
             }
-            else{
+            else {
                 fields[0].focus()
             }
         }
-        else if(event.key == "Tab"){
+        else if (event.key == "Tab") {
             if (fields.length > index + 1) {
                 fields[index + 1].focus()
             }
-            else{
+            else {
                 fields[0].focus()
+            }
+        }
+        else if (event.key == "Backspace") {
+            field.value = ""
+        }
+        else if (event.key == "ArrowLeft") {
+            if (index == 0) {
+                fields[fields.length - 1].focus()
+            }
+            else {
+                fields[index - 1].focus()
+            }
+        }
+        else if (event.key == "ArrowRight") {
+            if (index + 1 == fields.length) {
+                fields[0].focus()
+            }
+            else {
+                fields[index + 1].focus()
             }
         }
     })

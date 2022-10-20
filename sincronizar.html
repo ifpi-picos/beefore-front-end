@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/sincronizar.css">
     <title>Beefore</title>
-    <!-- <script src="scripts/verificar-token.js"></script> -->
+    <script src="scripts/verificar-token.js"></script>
 </head>
 
 <style>
@@ -27,20 +27,35 @@
             </p>
         </aside>
         <aside class="side-sincronizar">
-            <div class="title">
-                <h1 id="form-title">Sincronizar com Telegram</h1>
+            <div id="side-sincronizar">
+                <div class="title">
+                    <h1 id="form-title">Sincronizar com Telegram</h1>
+                    <p>Envie /sincronizar para <b>@BeeforeBot</b> no Telegram para receber seu código</p>
+                </div>
+                <form id="form-codigo">
+                    <input id="input-codigo-1" type="number" min="0" max="9" placeholder="0" required>
+                    <input id="input-codigo-2" type="number" min="0" max="9" placeholder="0" required>
+                    <input id="input-codigo-3" type="number" min="0" max="9" placeholder="0" required>
+                    <input id="input-codigo-4" type="number" min="0" max="9" placeholder="0" required>
+                    <input id="input-codigo-5" type="number" min="0" max="9" placeholder="0" required>
+                    <input id="input-codigo-6" type="number" min="0" max="9" placeholder="0" required>
+                </form>
+                <button id="button-confirmar">Confirmar</button>
             </div>
-            <form id="form-codigo">
-                <input id="input-codigo-1" type="number" min="0" max="9" required>
-                <input id="input-codigo-2" type="number" min="0" max="9" required>
-                <input id="input-codigo-3" type="number" min="0" max="9" required>
-                <input id="input-codigo-4" type="number" min="0" max="9" required>
-                <input id="input-codigo-5" type="number" min="0" max="9" required>
-                <input id="input-codigo-6" type="number" min="0" max="9" required>
-            </form>
+            <div>
+                <div id="loading">
+                    <div class="load-wheel"></div>
+                </div>
+                <div class="response">
+                    <h2 id="response-title"></h2>
+                    <p id="response-text"></p>
+                    <button id="button-confirm">Ok</button>
+                </div>
+            </div>
         </aside>
     </main>
     <script src="/scripts/sincronizar/min-max.js"></script>
+    <script src="/scripts/sincronizar/verificar-codigo.js"></script>
 </body>
 
 </html>
