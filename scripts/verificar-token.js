@@ -1,4 +1,4 @@
-const apiURL = document.location.host != "beefore.netlify.app" ? "http://localhost:3001" : "https://beefore.onrender.com"
+const apiURL = document.location.host != "beefore.netlify.app" ? "http://localhost:3001" : "https://beefore.kamiapp.com.br"
 
 function getCookie(cname) {
     let name = cname + "=";
