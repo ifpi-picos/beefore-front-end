@@ -43,7 +43,7 @@ img {
     padding-top: 2em;
 }
 
-.nome {
+#nome {
     margin-top: 1em;
 }
 
@@ -56,12 +56,16 @@ img {
     padding-bottom: 1em;
 }
 
-li {
+#button-sair {
+    color: red;
+}
+
+#button, #button-sair {
     list-style: none;
     padding: 6px;
 }
 
 a {
     text-decoration: none;
-    color:#FFFFFF
+    color: inherit;
 }
