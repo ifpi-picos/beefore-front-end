@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/dashboard.css">
     <title>Dashboard</title>
+    <script src="scripts/verificar-token.js"></script>
 </head>
 
 <style>
@@ -17,17 +18,21 @@
 <body>
     <main>
         <aside class="side-link-info">
-            <div class="menu-mobile">
-                <div class="linha1"></div>
-                <div class="linha2"></div>
-                <div class="linha3"></div>
-           </div>
-            <div class="perfil">
-                <div class="img-pefil">
-                    <img src="assets/perfil.png" alt="Foto de perfil do usuário">
+            <div class="user-info">
+                <div class="menu-mobile">
+                    <button id="button-menu">
+                        <div class="linha1"></div>
+                        <div class="linha2"></div>
+                        <div class="linha3"></div>
+                    </button>
                 </div>
-                <div id="nome">
-                    <h1>Nome Da Pessoa</h1>
+                <div class="perfil">
+                    <div class="img-pefil">
+                        <img src="assets/perfil.png" alt="Foto de perfil do usuário">
+                    </div>
+                    <div id="nome">
+                        <h1>Nome Da Pessoa</h1>
+                    </div>
                 </div>
             </div>
             <div class="nav-list">
@@ -44,6 +49,7 @@
                     <a href="/">Sair</a>
                 </li>
             </div>
+            <script src="/scripts/menu-mobile.js"></script>
         </aside>
         <aside class="side-info">
             <div class="container-dashboard">
@@ -72,4 +78,5 @@
         </aside>
     </main>
 </body>
+
 </html>

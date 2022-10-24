@@ -16,24 +16,26 @@ function getCookie(cname) {
     return "";
 }
 
-const token = getCookie("token")
+if (document.location.host != "127.0.0.1:5500") {
+    const token = getCookie("token")
 
-if (token) {
-    fetch(apiURL + "/auth/token", {
-        method: "POST",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': `${token}`
-        }
-    })
-        .then(res => {
-            if (res.status != 200) {
-                document.location.href = "/"
-                document.cookie = "token=; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+    if (token) {
+        fetch(apiURL + "/auth/token", {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': `${token}`
             }
         })
-}
-else {
-    document.location.href = "/"
+            .then(res => {
+                if (res.status != 200) {
+                    document.location.href = "/"
+                    document.cookie = "token=; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+                }
+            })
+    }
+    else {
+        document.location.href = "/"
+    }
 }
