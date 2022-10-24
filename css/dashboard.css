@@ -21,7 +21,6 @@ img {
 }
 
 .side-link-info {
-    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,7 +28,7 @@ img {
     background-color: var(--primary);
     text-align: center;
     color: #FFFFFF;
-    height: 100%;
+    height: 100vh;
     width: 260px;
     padding: 6px 24px;
 }
@@ -68,4 +67,44 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.side-info {
+    align-items: center;
+    width: 80%;
+}
+
+.container-dashboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.dashboard-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    height: 40vh;
+    padding: 20px;
+    margin: 0px 20px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.marca-beefore {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.dashboard-frase {
+    color: var(--primary);
+    font-size: 30px;
 }
