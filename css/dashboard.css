@@ -22,6 +22,19 @@ main {
     transition: 0.3s;
 }
 
+.menu-mobile button {
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 img {
     width: 100px;
     height: 100px;
@@ -138,11 +151,13 @@ a {
 
     .side-link-info {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         background-color: var(--primary);
+        justify-content: center;
+        align-items: flex-start;
         text-align: center;
         color: #FFFFFF;
-        height: 70px;
+        height: max-content;
         width: 100%;
         padding: 0px;
     }
@@ -169,12 +184,11 @@ a {
     }
 
     .nav-list {
-        position: absolute;
-        top: 10vh;
-        right: 0;
+        position: relative;
         width: 100vw;
-        height: 30vh;
+        height: 12rem;
         background-color: var(--primary);
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
