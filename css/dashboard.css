@@ -9,6 +9,19 @@ main {
     flex-direction: row;
 }
 
+.menu-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-mobile div {
+    width: 32px;
+    height: 2px;
+    background: #FFFFFF;
+    margin: 8px;
+    transition: 0.3s;
+}
+
 img {
     width: 100px;
     height: 100px;
@@ -21,7 +34,6 @@ img {
 }
 
 .side-link-info {
-    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -29,7 +41,7 @@ img {
     background-color: var(--primary);
     text-align: center;
     color: #FFFFFF;
-    height: 100%;
+    height: 100vh;
     width: 260px;
     padding: 6px 24px;
 }
@@ -68,4 +80,138 @@ img {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.side-info {
+    align-items: center;
+    width: 80%;
+}
+
+.container-dashboard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.dashboard-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 260px;
+    padding: 20px;
+    margin: 0px 20px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.marca-beefore {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.dashboard-frase {
+    color: var(--primary);
+    font-size: 30px;
+}
+
+@media(max-width: 750px){
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-mobile {
+        display: block;
+        position: absolute;
+        right: 8vw;
+    }
+
+    .side-link-info {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--primary);
+        text-align: center;
+        color: #FFFFFF;
+        height: 70px;
+        width: 100%;
+        padding: 0px;
+    }
+
+    img {
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin-left: 10px;
+    }
+
+    .perfil {
+        margin: 10px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #nome {
+        margin: 0;
+        font-size: small;
+        margin-left: 15px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .side-info {
+        width: 100%;
+    }
+
+    .container-dashboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2vh;
+    }
+
+    .dashboard-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 150px;
+        margin: 20px 0px; 
+        border-radius: 20px;
+        background-color: #FFFFFF;
+        text-align: center;
+        font-size: 15px;
+        color: var(--primary);
+    }
+
+    .marca-beefore {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 5vh;
+    }
+
+    .dashboard-frase {
+        color: var(--primary);
+        font-size: 20px;
+        align-items: center;
+    }
+
+    
 }
