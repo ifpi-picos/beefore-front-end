@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/preferencias.css">
     <title>Beefore</title>
-    <script src="scripts/verificar-token.js"></script>
 </head>
 
 <style>
@@ -49,30 +47,23 @@
             </div>
             <script src="/scripts/menu-mobile.js"></script>
         </aside>
-        <aside class="side-info">
-            <div class="container-dashboard">
-                <div class="dashboard-box">
-                    <h1>Utilização atual</h1>
-                    <h2 id="#">8 de 12</h2>
+        <aside class="preferencias">
+        <div class="container">
+            <div class="forms">
+                <div class="title">
+                    <h1 id="form-title">Preferências</h1>
                 </div>
-                <div class="dashboard-box">
-                    <h1>Dia com mais uso</h1>
-                    <h2 id="#">3º feira</h2>
-                </div>
-                <div class="dashboard-box">
-                    <h1>Tempo médio de utilização</h1>
-                    <h2 id="#">6 horas</h2>
-                </div>
-            </div>
-            <div class="marca-beefore">
-                <img src="/assets/Logo.png" alt="Logo Beefore">
-                <div class="dashboard-frase">
-                    <h1>Beefore</h1>
-                    <p>Não perca tempo, veja antes!</p>
+                <div>
+                    <form id="form-preferencias">
+                        <input id="input-preferencias-nome" type="text" placeholder="Nome" required>
+                        <input id="input-preferencias-funcao" type="text" placeholder="Função" required>
+                        <input id="input-preferencias-imagem" type="url" placeholder="Imagem de perfil (URL)" required>
+                        <input id="input-preferencias-senha" type="password" placeholder="Senha" required>
+                    </form>
                 </div>
             </div>
+        </div>
         </aside>
     </main>
 </body>
-
 </html>

@@ -79,12 +79,19 @@
         align-items: center;
         justify-content: center;
         margin: 5vh;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .dashboard-frase {
         color: var(--primary);
         font-size: 20px;
         align-items: center;
+    }
+
+    .marca-beefore img {
+        width: 40%;
+        margin-bottom: 10px;
     }
 
     
