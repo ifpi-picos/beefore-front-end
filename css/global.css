@@ -17,3 +17,159 @@
 body {
     background-color: var(--background);
 }
+
+/*dashboard-nav*/
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-mobile div {
+    width: 32px;
+    height: 2px;
+    background: #FFFFFF;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.menu-mobile button {
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil img {
+    width: 60%;
+    margin-bottom: 20px;
+    border-radius: 100px;
+}
+
+.marca-beefore img {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+
+.side-link-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    text-align: center;
+    color: #FFFFFF;
+    height: 100vh;
+    width: 260px;
+    padding: 6px 24px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2em;
+}
+
+#nome {
+    margin-top: 1em;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#button-sair {
+    color: red;
+}
+
+#button, #button-sair {
+    list-style: none;
+    padding: 6px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media(max-width: 750px){
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-mobile {
+        display: block;
+        position: absolute;
+        right: 4vw;
+    }
+
+    .side-link-info {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primary);
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+        color: #FFFFFF;
+        height: max-content;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .perfil img {
+        width: 18%;
+        border-radius: 100px;
+        margin: 0;
+        position: relative;
+        display: block;
+        right: 10vw;
+    }
+
+    .perfil {
+        margin: 10px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #nome {
+        margin: 0;
+        font-size: small;
+        margin-left: 15px;
+        position: relative;
+        display: block;
+        right: 10vw;
+    }
+
+    .nav-list {
+        position: relative;
+        width: 100vw;
+        height: 12rem;
+        background-color: var(--primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

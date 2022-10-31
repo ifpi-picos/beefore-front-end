@@ -22,6 +22,7 @@ main {
 
 .side-logo img {
     width: 60%;
+    height: 40%;
     margin-bottom: 20px;
 }
 
@@ -65,12 +66,11 @@ main {
 }
 
 .side-login-register form input {
-    padding-left: 60px;
     font-size: medium;
     font-weight: 400;
     margin: 5px;
     border: none;
-    width: 100%;
+    width: 80%;
     height: 2.5em;
 }
 
@@ -132,43 +132,40 @@ main {
 }
 
 .side-cadastro-register form input {
-    padding-left: 60px;
     font-size: medium;
     font-weight: 400;
     margin: 5px;
     border: none;
-    width: 100%;
+    width: 80%;
     height: 2.5em;
 }
 
-#input-criar-conta-nome {
-    background: url(/assets/Icon-Pessoa.png) no-repeat scroll 10px;
+.input-icone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     background-color: var(--background);
-    background-size: 10%;
+    margin: 3px;
+    width: 100%;
 }
 
-#input-criar-conta-cartao {
-    background: url(/assets/Icon-Cartao.png) no-repeat scroll 10px;
-    background-color: var(--background);
-    background-size: 10%;
+.input-icone img {
+    width: 10%;
 }
 
-#input-criar-conta-ocupacao {
-    background: url(/assets/Icon-Ocupacao.png) no-repeat scroll 10px;
+input {
     background-color: var(--background);
-    background-size: 10%;
+    outline: none;
 }
 
-#input-login-email, #input-criar-conta-email {
-    background: url(/assets/Icon-Email.png) no-repeat scroll 10px;
-    background-color: var(--background);
-    background-size: 10%;
-}
-
-#input-login-senha, #input-criar-conta-senha, #input-criar-conta-confirmar-senha {
-    background: url(/assets/Icon-Cadeado.png) no-repeat scroll 10px;
-    background-color: var(--background);
-    background-size: 10%;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px var(--background)inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .side-cadastro-register button {
@@ -314,12 +311,11 @@ main {
     }
 
     .side-login-register form input {
-        padding-left: 60px;
         font-size: large;
         font-weight: 400;
         margin: 5px;
         border: none;
-        width: 100%;
+        width: 80%;
         height: 3em;
     }
 

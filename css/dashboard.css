@@ -3,98 +3,6 @@
     box-sizing: border-box;
 }
 
-
-main {
-    display: flex;
-    flex-direction: row;
-}
-
-.menu-mobile {
-    display: none;
-    cursor: pointer;
-}
-
-.menu-mobile div {
-    width: 32px;
-    height: 2px;
-    background: #FFFFFF;
-    margin: 8px;
-    transition: 0.3s;
-}
-
-.menu-mobile button {
-    opacity: 1;
-    background-color: transparent;
-    border: none;
-}
-
-.user-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-}
-
-.img-perfil {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.side-link-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary);
-    text-align: center;
-    color: #FFFFFF;
-    height: 100vh;
-    width: 260px;
-    padding: 6px 24px;
-}
-
-.perfil {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 2em;
-}
-
-#nome {
-    margin-top: 1em;
-}
-
-.nav-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 1em;
-}
-
-#button-sair {
-    color: red;
-}
-
-#button, #button-sair {
-    list-style: none;
-    padding: 6px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .side-info {
     align-items: center;
     width: 80%;
@@ -138,62 +46,6 @@ a {
 }
 
 @media(max-width: 750px){
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menu-mobile {
-        display: block;
-        position: absolute;
-        right: 4vw;
-    }
-
-    .side-link-info {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--primary);
-        justify-content: center;
-        align-items: flex-start;
-        text-align: center;
-        color: #FFFFFF;
-        height: max-content;
-        width: 100%;
-        padding: 0px;
-    }
-
-    img {
-        margin: 0;
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        margin-left: 10px;
-    }
-
-    .perfil {
-        margin: 10px;
-        padding: 0px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    #nome {
-        margin: 0;
-        font-size: small;
-        margin-left: 15px;
-    }
-
-    .nav-list {
-        position: relative;
-        width: 100vw;
-        height: 12rem;
-        background-color: var(--primary);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-
     .side-info {
         width: 100%;
     }
@@ -227,12 +79,19 @@ a {
         align-items: center;
         justify-content: center;
         margin: 5vh;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .dashboard-frase {
         color: var(--primary);
         font-size: 20px;
         align-items: center;
+    }
+
+    .marca-beefore img {
+        width: 40%;
+        margin-bottom: 10px;
     }
 
     
