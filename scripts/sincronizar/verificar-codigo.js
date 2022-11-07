@@ -41,7 +41,7 @@ buttonConfirmar.addEventListener("click", () => {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': getCookie("token")
+                'Authorization': window.localStorage.getItem("token")
             },
             body: JSON.stringify({
                 code: code

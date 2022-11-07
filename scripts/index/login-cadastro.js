@@ -51,7 +51,6 @@ buttonLogin.addEventListener("click", () => {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                credentials: 'include',
                 body: JSON.stringify({
                     email: email,
                     password: senha
@@ -59,7 +58,11 @@ buttonLogin.addEventListener("click", () => {
             })
                 .then(res => {
                     if (res.status == 200) {
-                        return document.location.href = "/dashboard.html"
+                        res.json()
+                            .then(data => {
+                                window.localStorage.setItem('token', data.token)
+                                return document.location.href = "/dashboard.html"
+                            })
                     }
 
                     loading.style = "display:none"
