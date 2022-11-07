@@ -10,13 +10,6 @@ const responseText = document.getElementById("response-text")
 
 const loading = document.getElementById("loading")
 
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
 buttonLogin.addEventListener("click", () => {
     if (buttonLogin.getAttribute("active") == "true") {
         loading.style = "display:flex"
@@ -58,6 +51,7 @@ buttonLogin.addEventListener("click", () => {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
+                credentials: 'include',
                 body: JSON.stringify({
                     email: email,
                     password: senha
@@ -65,11 +59,6 @@ buttonLogin.addEventListener("click", () => {
             })
                 .then(res => {
                     if (res.status == 200) {
-                        res.json()
-                            .then(data => {
-                                setCookie("token", data.token, 7)
-                            })
-
                         return document.location.href = "/dashboard.html"
                     }
 
@@ -169,7 +158,7 @@ buttonCriarConta.addEventListener("click", () => {
                 forms.style = "display:flex;"
             })
         }
-        else if (!cartao || !cartao.match(/(^(\d){10})$/g)){
+        else if (!cartao || !cartao.match(/(^(\d){10})$/g)) {
             loading.style = "display:none"
             response.style = "display:flex;"
             forms.style = "display:none;"
@@ -182,7 +171,7 @@ buttonCriarConta.addEventListener("click", () => {
                 forms.style = "display:flex;"
             })
         }
-        else if (ocupacao && !ocupacao.match(/^[a-zA-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ-]{2,}(?: [a-zA-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ-]+){0,8}$/g)){
+        else if (ocupacao && !ocupacao.match(/^[a-zA-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ-]{2,}(?: [a-zA-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ-]+){0,8}$/g)) {
             loading.style = "display:none"
             response.style = "display:flex;"
             forms.style = "display:none;"
@@ -221,7 +210,7 @@ buttonCriarConta.addEventListener("click", () => {
                 forms.style = "display:flex;"
             })
         }
-        else if (senha != confirmarSenha){
+        else if (senha != confirmarSenha) {
             loading.style = "display:none"
             response.style = "display:flex;"
             forms.style = "display:none;"
