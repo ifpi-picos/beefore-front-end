@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/preferencias.css">
     <title>Beefore</title>
-    <script src="scripts/verificar-token.js"></script>
+    <script type="module"  src="scripts/verificar-token.js"></script>
 </head>
 
 <style>
@@ -26,26 +26,33 @@
                     </button>
                 </div>
                 <div class="perfil">
-                    <img src="assets/perfil.png" alt="Foto de perfil do usuário">
+                    <img id="foto-perfil" src="assets/perfil.png" alt="Foto de perfil do usuário">
                     <div id="nome">
                         <h1>Nome Da Pessoa</h1>
                     </div>
                 </div>
             </div>
             <div class="nav-list">
-                <li id="button">
+                <li>
                     <a href="/dashboard.html">Início</a>
                 </li>
-                <li id="button">
+                <li>
                     <a href="/registros.html">Meus Registros</a>
                 </li>
-                <li id="button">
+                <li id="button-registros-usuarios" style="display: none;">
+                    <a href="#">Registros de Usuários</a>
+                </li>
+                <li id="button-autorizacoes" style="display: none;">
+                    <a href="#">Autorizações</a>
+                </li>
+                <li>
                     <a href="/preferencias.html">Preferências</a>
                 </li>
                 <li id="button-sair">
                     <a href="/">Sair</a>
                 </li>
             </div>
+            <script type="module" src="/scripts/menu.js"></script>
             <script src="/scripts/menu-mobile.js"></script>
         </aside>
         <aside class="preferencias">

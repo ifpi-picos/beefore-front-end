@@ -2,7 +2,6 @@ const buttonMenu = document.getElementById("button-menu")
 
 const navList = document.querySelector(".nav-list")
 
-
 if (window.screen.width <= 750) {
     navList.setAttribute("active", "false")
     navList.style = "display: none;"

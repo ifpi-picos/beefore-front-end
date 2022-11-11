@@ -21,7 +21,7 @@ body {
 /*dashboard-nav*/
 
 main {
-    display: flex;
+    display: none;
     flex-direction: row;
 }
 
@@ -101,7 +101,7 @@ main {
     color: red;
 }
 
-#button, #button-sair {
+.nav-list li, #button-sair {
     list-style: none;
     padding: 6px;
 }
