@@ -56,13 +56,12 @@ buttonLogin.addEventListener("click", () => {
                     password: senha
                 })
             })
-                .then(res => {
+                .then(async (res) => {
                     if (res.status == 200) {
-                        res.json()
-                            .then(data => {
-                                window.localStorage.setItem('token', data.token)
-                                return document.location.href = "/dashboard.html"
-                            })
+                        const data = await res.json()
+
+                        window.localStorage.setItem('token', data.token)
+                        return document.location.href = "/dashboard.html"
                     }
 
                     loading.style = "display:none"
