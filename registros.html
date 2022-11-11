@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,8 @@
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/registros.css">
     <title>Beefore</title>
-    <script type="module"  src="scripts/verificar-token.js"></script>
+    <script type="module" src="scripts/verificar-token.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
 </head>
 
 <style>
@@ -62,40 +64,12 @@
                         <h1>Registro de entrada e saída</h1>
                     </div>
                     <div class="box-registro">
-                        <div class="box">
-                            <div class="data-registro">
-                                <h2>Data</h2>
-                                <h2 id="dia">02</h2>
-                                <h2 id="mes">09</h2>
-                                <h2 id="ano">2022</h2>
-                            </div>
-                            <div id="linha-vertical"></div>
-                            <div class="movimento">
-                                <h2>Entrada - 07:00 AM</h2>
-                                <h2>Saída - 12:00 AM</h2>
-                                <h2>Entrada - 14:00 PM</h2>
-                                <h2>Saída - 18:00 PM</h2>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="data-registro">
-                                <h2>Data</h2>
-                                <h2 id="dia">03</h2>
-                                <h2 id="mes">09</h2>
-                                <h2 id="ano">2022</h2>
-                            </div>
-                            <div id="linha-vertical"></div>
-                            <div class="movimento">
-                                <h2>Entrada - 07:00 AM</h2>
-                                <h2>Saída - 12:00 AM</h2>
-                                <h2>Entrada - 14:00 PM</h2>
-                                <h2>Saída - 18:00 PM</h2>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </aside>
-    </main>    
+        <script type="module" src="/scripts/registros/registros.js"></script>
+    </main>
 </body>
+
 </html>

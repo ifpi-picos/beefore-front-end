@@ -64,17 +64,33 @@
                 <div>
                     <form id="form-preferencias">
                         <input id="input-preferencias-nome" type="text" placeholder="Nome" required>
-                        <input id="input-preferencias-funcao" type="text" placeholder="Função" required>
+                        <input id="input-preferencias-funcao" type="text" placeholder="Ocupação" required>
                         <input id="input-preferencias-imagem" type="url" placeholder="Imagem de perfil (URL)" required>
                         <input id="input-preferencias-senha" type="password" placeholder="Senha" required>
+                        <input id="input-preferencias-confirmar-senha" type="password" placeholder="Repita a senha" required>
                     </form>
                 </div>
                 <div class="checkbox">
                     <input type="checkbox" id="comprovante" name="comprovante">
                     <label class="checkbox-frase" for="comprovante">Receber comprovante de entrada e saída</label>
                 </div>
+                <div class="buttons">
+                    <a href="/sincronizar.html"><button>Sincronizar com Telegram</button></a>
+                </div>
+                <div class="controls">
+                    <button id="button-confirmar">Confirmar Alterações</button>
+                </div>
+            </div>
+            <div id="loading">
+                <div class="load-wheel"></div>
+            </div>
+            <div class="response">
+                <h2 id="response-title"></h2>
+                <p id="response-text"></p>
+                <button id="button-confirm">Ok</button>
             </div>
         </div>
+        <script type="module" src="scripts/preferencias/preferencias.js"></script>
         </aside>
     </main>
 </body>
