@@ -63,7 +63,7 @@
     border: 3px solid var(--primary);
 }
 
-#linha-vertical {
+#linha {
     height: 150px;
     border-right: 3px solid var(--primary);
     margin: 0px 20px;
@@ -100,4 +100,99 @@
 #button-rejeitar {
     background-color: #F47272;
     color: var(--primary);
+}
+
+@media(max-width: 750px){
+    .autorizacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+        height: 140vh;
+        padding: 20px;
+        margin: 20px 10px;
+        border-radius: 20px;
+        background-color: #FFFFFF;
+        text-align: center;
+        font-size: 15px;
+        color: var(--primary);
+    }
+
+    .container-autorizacao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 1em;
+    }
+
+    .container .container-autorizacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .container .container-autorizacao .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 350px;
+        padding: 10px;
+        margin: 20px 0px;
+        border-radius: 20px;
+        background-color: #ECF0F1;
+        text-align: center;
+        color: var(--primary);
+    }
+    
+    #linha-mobile {
+        width: 150px;
+        border-top: 3px solid var(--primary);
+        margin: 20px 0px;
+    }
+
+    #linha {
+        display: none;
+    }
+
+    .identificacao-autorizacao {
+        text-align: center;
+    }
+    
+    .buttons button {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        padding: 5px 10px;
+        height: 2em;
+        font-size: medium;
+        font-weight: bolder;
+        margin: 20px 5px;
+        border-radius: 20px;
+        box-shadow: rgb(128, 128, 128) 5px 5px 15px;
+        border: 3px solid;
+        cursor: pointer;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+    }
 }
