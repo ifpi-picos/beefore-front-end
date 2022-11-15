@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.autorizacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 73vw;
+    height: 90vh;
+    padding: 20px;
+    margin: 20px 20px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.container-autorizacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .container-autorizacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.container .container-autorizacao .box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    height: 170px;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 20px;
+    background-color: #ECF0F1;
+    text-align: center;
+    color: var(--primary);
+}
+
+.box {
+    border: 3px solid var(--primary);
+}
+
+#linha-vertical {
+    height: 150px;
+    border-right: 3px solid var(--primary);
+    margin: 0px 20px;
+}
+
+#authorization-type {
+    width: 180px;
+}
+
+.identificacao-autorizacao {
+    text-align: left;
+}
+
+.buttons button {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 5px 10px;
+    height: 2em;
+    font-size: medium;
+    font-weight: bolder;
+    margin: 20px 5px;
+    border-radius: 20px;
+    box-shadow: rgb(128, 128, 128) 5px 5px 15px;
+    border: 3px solid;
+    cursor: pointer;
+}
+
+#button-aprovar {
+    background-color: #75F472;
+    color: var(--primary);
+}
+
+#button-rejeitar {
+    background-color: #F47272;
+    color: var(--primary);
+}
