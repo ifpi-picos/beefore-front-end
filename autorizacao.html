@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/preferencias.css">
+    <link rel="stylesheet" href="/css/autorizacao.css">
     <title>Beefore</title>
     <script type="module"  src="scripts/verificar-token.js"></script>
 </head>
@@ -55,43 +55,48 @@
             <script type="module" src="/scripts/menu.js"></script>
             <script src="/scripts/menu-mobile.js"></script>
         </aside>
-        <aside class="preferencias">
-        <div class="container">
-            <div class="forms">
-                <div class="title">
-                    <h1 id="form-title">Preferências</h1>
-                </div>
-                <div>
-                    <form id="form-preferencias">
-                        <input id="input-preferencias-nome" type="text" placeholder="Nome" required>
-                        <input id="input-preferencias-funcao" type="text" placeholder="Ocupação" required>
-                        <input id="input-preferencias-imagem" type="url" placeholder="Imagem de perfil (URL)" required>
-                        <input id="input-preferencias-senha" type="password" placeholder="Senha" required>
-                        <input id="input-preferencias-confirmar-senha" type="password" placeholder="Repita a senha" required>
-                    </form>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" id="comprovante" name="comprovante">
-                    <label class="checkbox-frase" for="comprovante">Receber comprovante de entrada e saída</label>
-                </div>
-                <div class="buttons">
-                    <a href="/sincronizar.html"><button>Sincronizar com Telegram</button></a>
-                </div>
-                <div class="controls">
-                    <button id="button-confirmar">Confirmar Alterações</button>
+        <aside class="autorizacao">
+            <div class="container">
+                <div class="container-autorizacao">
+                    <div class="title">
+                        <h1>Lista de autorizações</h1>
+                    </div>
+                    <div class="box-autorizacao">
+                        <div class="box">
+                            <h2 id="authorization-type">Tipo de Autorização</h2>
+                            <div id="linha"></div>
+                            <div id="linha-mobile"></div>
+                            <div class="identificacao-autorizacao">
+                                <h2>Nome da Pessoa</h2>
+                                <h2>ID do cartão</h2>
+                                <h2>Função</h2>
+                            </div>
+                            <div id="linha"></div>
+                            <div id="linha-mobile"></div>
+                            <div class="buttons">
+                                <button id="button-aprovar">Aprovar</button>
+                                <button id="button-rejeitar">Rejeitar</button>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h2 id="authorization-type">Tipo de Autorização</h2>
+                            <div id="linha"></div>
+                            <div id="linha-mobile"></div>
+                            <div class="identificacao-autorizacao">
+                                <h2>Nome da Pessoa</h2>
+                                <h2>ID do cartão</h2>
+                                <h2>Função</h2>
+                            </div>
+                            <div id="linha"></div>
+                            <div id="linha-mobile"></div>
+                            <div class="buttons">
+                                <button id="button-aprovar">Aprovar</button>
+                                <button id="button-rejeitar">Rejeitar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="loading">
-                <div class="load-wheel"></div>
-            </div>
-            <div class="response">
-                <h2 id="response-title"></h2>
-                <p id="response-text"></p>
-                <button id="button-confirm">Ok</button>
-            </div>
-        </div>
-        <script type="module" src="scripts/preferencias/preferencias.js"></script>
         </aside>
     </main>
 </body>
-</html>
