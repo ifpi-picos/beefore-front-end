@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 73vw;
     height: 90vh;
     padding: 20px;
@@ -26,6 +26,31 @@
     text-align: center;
     font-size: 20px;
     color: var(--primary);
+    overflow-y: auto;
+}
+
+.container::-webkit-scrollbar, .movimento::-webkit-scrollbar {
+    width: 12px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #FFFFFF;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.movimento::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+.container::-webkit-scrollbar-thumb, .movimento::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+    border: 2px solid rgba(83, 83, 83, 0.411);
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover, .movimento::-webkit-scrollbar-thumb:hover {
+    background: var(--background);
 }
 
 .container-registro {
@@ -69,6 +94,9 @@
 
 .movimento {
     padding-left: 50px;
+    padding-right: 50px;
+    overflow-y: auto;
+    max-height: 100%;
 }
 
 #linha-vertical {
@@ -80,7 +108,7 @@
     border: 3px solid var(--primary);
 }
 
-@media(max-width: 750px){
+@media(max-width: 750px) {
     .registros {
         display: flex;
         flex-direction: column;
@@ -151,7 +179,7 @@
     .movimento {
         padding-left: 15px;
     }
-    
+
     #linha-vertical {
         height: 100px;
         border-right: 3px solid var(--primary);
