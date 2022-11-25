@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/dashboard.css">
     <title>Beefore</title>
     <script type="module" src="scripts/verificar-token.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
 </head>
 
 <style>
@@ -60,15 +61,15 @@
             <div class="container-dashboard">
                 <div class="dashboard-box">
                     <h1>Utilização atual</h1>
-                    <h2 id="#">8 de 12</h2>
+                    <h2 id="utilizacao-atual">8 de 12</h2>
                 </div>
                 <div class="dashboard-box">
                     <h1>Dia com mais uso</h1>
-                    <h2 id="#">3º feira</h2>
+                    <h2 id="dia-mais-uso">3º feira</h2>
                 </div>
                 <div class="dashboard-box">
                     <h1>Tempo médio de utilização</h1>
-                    <h2 id="#">6 horas</h2>
+                    <h2 id="utilizacao-media">6 horas</h2>
                 </div>
             </div>
             <div class="marca-beefore">
@@ -79,6 +80,7 @@
                 </div>
             </div>
         </aside>
+        <script type="module" src="/scripts/dashboard/info.js"></script>
     </main>
 </body>
 
