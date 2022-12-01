@@ -49,6 +49,7 @@ if (window.localStorage.getItem("dev") == "true" || document.location.host != "1
 
     }
     else if (res.status == 404) {
-
+        const title = document.querySelector(".container-registro .title h1")
+        title.innerText = "Nenhum registro encontrado"
     }
 }

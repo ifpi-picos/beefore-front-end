@@ -12,6 +12,7 @@ if (window.localStorage.getItem("dev") == "true" || document.location.host != "1
         })
 
         if (res.status != 200) {
+            window.localStorage.removeItem("token")
             document.location.href = "/"
         }
         else if (res.status == 200) {
@@ -20,6 +21,7 @@ if (window.localStorage.getItem("dev") == "true" || document.location.host != "1
         }
     }
     catch (err) {
+        window.localStorage.removeItem("token")
         document.location.href = "/"
     }
 }

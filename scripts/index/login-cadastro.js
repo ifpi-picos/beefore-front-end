@@ -10,6 +10,10 @@ const responseText = document.getElementById("response-text")
 
 const loading = document.getElementById("loading")
 
+if(window.localStorage.getItem("token")){
+    document.location.href = "/dashboard.html"
+}
+
 buttonLogin.addEventListener("click", () => {
     if (buttonLogin.getAttribute("active") == "true") {
         loading.style = "display:flex"

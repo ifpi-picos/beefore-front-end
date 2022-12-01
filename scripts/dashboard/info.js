@@ -1,3 +1,5 @@
+import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
+
 const apiURL = document.location.host != "beefore.netlify.app" ? "http://localhost:3001" : "https://beefore.kamiapp.com.br"
 
 if (window.localStorage.getItem("dev") == "true" || document.location.host != "127.0.0.1:5500") {
@@ -60,5 +62,16 @@ if (window.localStorage.getItem("dev") == "true" || document.location.host != "1
         actualUsageDisplay.innerText = `${data.actualUsage} de 12`
         mostUsedDayDisplay.innerText = `${mostUsedDay}`
         averageUsageDisplay.innerText = `${averageUsage} ${type}`
+
+
+        const socket = io(apiURL, {
+            extraHeaders: {
+                Authorization: window.localStorage.getItem("token")
+            }
+        });
+
+        socket.on("actualUsage", (data) => {
+            actualUsageDisplay.innerText = `${data} de 12`
+        })
     }
 }
