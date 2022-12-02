@@ -84,20 +84,7 @@
     margin: 0px 20px 0px 5px;
 }
 
-#input-registro-nome {
-    background: url(/assets/Icon-Pessoa.png) no-repeat scroll 10px;
-    background-color: var(--background);
-    background-size: 8%;
-}
-
 .pesquisa-registro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container .pesquisa-registro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,22 +93,50 @@
     margin-bottom: 1em;
 }
 
-.container .pesquisa-registro input {
-    padding-left: 60px;
+.pesquisa-registro input {
     font-size: medium;
     font-weight: 400;
     margin: 5px;
     border: none;
-    width: 100%;
-    height: 2.5em;
+    width: 80%;
+    height: 2.2em;
 }
 
+.input-icone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    margin: 8px;
+    width: 100%;
+}
+
+.input-icone img {
+    width: 10%;
+}
+
+input {
+    background-color: var(--background);
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px var(--background)inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
 .pesquisa-registro h2 {
-    font-size: small;
+    font-size: medium;
 }
 
 .box-registro-title {
-    font-size: small;
+    font-size: medium;
 }
 
 @media(max-width: 750px){

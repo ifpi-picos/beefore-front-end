@@ -14,15 +14,15 @@ main {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     width: 35vw;
-    height: 75vh;
+    height: 80vh;
     background-color: var(--primary);
     text-align: center;
     color: #FFFFFF;
 }
 
 .side-logo img {
-    width: 60%;
-    height: 40%;
+    width: 250px;
+    height: 250px;
     margin-bottom: 20px;
 }
 
@@ -33,8 +33,8 @@ main {
     align-items: center;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    width: 45vw;
-    height: 75vh;
+    width: 50vw;
+    height: 80vh;
     background-color: #FFFFFF;
     color: var(--primary);
     position: relative;
@@ -71,7 +71,7 @@ main {
     margin: 5px;
     border: none;
     width: 80%;
-    height: 2.5em;
+    height: 2.2em;
 }
 
 .side-login-register button {
@@ -106,8 +106,8 @@ main {
     align-items: center;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
-    width: 45vw;
-    height: 75vh;
+    width: 50vw;
+    height: 80vh;
     background-color: #FFFFFF;
     color: var(--primary);
     position: relative;
@@ -137,7 +137,7 @@ main {
     margin: 5px;
     border: none;
     width: 80%;
-    height: 2.5em;
+    height: 2.2em;
 }
 
 .input-icone {
@@ -287,7 +287,8 @@ input:-webkit-autofill:focus {
     }
 
     .side-logo img {
-        width: 50%;
+        width: 150px;
+        height: 150px;
         margin-bottom: 20px;
     }
 

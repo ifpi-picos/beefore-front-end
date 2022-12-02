@@ -127,6 +127,18 @@
     color: var(--primary);
 }
 
+#button-aprovar:hover {
+    background-color: #FFFFFF;
+    color: #75F472;
+    transition: ease-in-out 0.2s;
+}
+
+#button-rejeitar:hover {
+    background-color: #FFFFFF;
+    color: #F47272;
+    transition: ease-in-out 0.2s;
+}
+
 @media(max-width: 750px){
     .autorizacao {
         display: flex;
