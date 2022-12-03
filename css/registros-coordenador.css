@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 73vw;
     height: 90vh;
     padding: 20px;
@@ -26,6 +26,27 @@
     text-align: center;
     font-size: 20px;
     color: var(--primary);
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar{
+    width: 12px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+    border: 2px solid rgba(83, 83, 83, 0.411);
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: var(--background);
 }
 
 .container-registro-coordenador {
@@ -64,7 +85,7 @@
     color: var(--primary);
 }
 
-.identificacao-autorizacao {
+.identificacao-usuario {
     padding-left: 30px;
     text-align: left;
 }
@@ -114,7 +135,8 @@
 }
 
 .input-icone img {
-    width: 10%;
+    width: 13%;
+    cursor: pointer;
 }
 
 input {
@@ -130,13 +152,37 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-
 .pesquisa-registro h2 {
     font-size: medium;
 }
 
 .box-registro-title {
     font-size: medium;
+}
+
+.load-wheel {
+    border: 10px solid var(--primary);
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    border-radius: 50%;
+    width: 4em;
+    height: 4em;
+    animation: spin 2s linear infinite;
+}
+
+#loading {
+    display: none;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media(max-width: 750px){
@@ -152,7 +198,7 @@ input:-webkit-autofill:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 90vw;
         height: 80vh;
         padding: 20px;
@@ -190,7 +236,7 @@ input:-webkit-autofill:focus {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: 250px;
+        width: 280px;
         height: 130px;
         padding: 10px;
         margin: 20px 0px;
@@ -200,7 +246,7 @@ input:-webkit-autofill:focus {
         color: var(--primary);
     }
 
-    .identificacao-autorizacao {
+    .identificacao-usuario {
         padding-left: 10px;
         text-align: left;
         font-size: small;

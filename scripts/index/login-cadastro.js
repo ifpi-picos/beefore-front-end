@@ -22,7 +22,7 @@ buttonLogin.addEventListener("click", () => {
         const email = document.getElementById("input-login-email").value
         const senha = document.getElementById("input-login-senha").value
 
-        if (!email || !email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/g)) {
+        if (!email || !email.match(/^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/g)) {
             loading.style = "display:none"
             response.style = "display:flex;"
             forms.style = "display:none;"
@@ -52,8 +52,8 @@ buttonLogin.addEventListener("click", () => {
             fetch(apiURL + "/auth/login", {
                 method: "POST",
                 headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     email: email,
@@ -64,7 +64,7 @@ buttonLogin.addEventListener("click", () => {
                     if (res.status == 200) {
                         const data = await res.json()
 
-                        window.localStorage.setItem('token', data.token)
+                        window.localStorage.setItem("token", data.token)
                         return document.location.href = "/dashboard.html"
                     }
 
@@ -190,7 +190,7 @@ buttonCriarConta.addEventListener("click", () => {
                 forms.style = "display:flex;"
             })
         }
-        else if (!email || !email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/g)) {
+        else if (!email || !email.match(/^[a-zA-Z0-9.!#$%&"*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/g)) {
             loading.style = "display:none"
             response.style = "display:flex;"
             forms.style = "display:none;"
@@ -233,8 +233,8 @@ buttonCriarConta.addEventListener("click", () => {
             fetch(apiURL + "/user/", {
                 method: "POST",
                 headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     name: nome,
@@ -242,7 +242,7 @@ buttonCriarConta.addEventListener("click", () => {
                     cardid: cartao,
                     email: email,
                     password: senha,
-                    type: 'Member',
+                    type: "Member",
                 })
             })
                 .then(res => {

@@ -108,6 +108,28 @@
     border: 3px solid var(--primary);
 }
 
+#button-voltar {
+    width: 8em;
+    height: 2em;
+    font-size: medium;
+    font-weight: normal;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: rgb(128, 128, 128) 5px 5px 15px;
+    border: 2px solid;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    opacity: 100%;
+}
+
+#button-voltar:hover {
+    background-color: #FFFFFF;
+    color: var(--primary);
+    transition: ease-in-out 0.2s;
+}
+
 @media(max-width: 750px) {
     .registros {
         display: flex;
@@ -121,7 +143,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 90vw;
         height: 80vh;
         padding: 20px;
@@ -177,7 +199,8 @@
     }
 
     .movimento {
-        padding-left: 15px;
+        padding: 0;
+        width: 100%;
     }
 
     #linha-vertical {

@@ -34,7 +34,7 @@
 }
 
 .container::-webkit-scrollbar-track {
-    background: #FFFFFF;
+    background: #e0e0e0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -74,7 +74,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 650px;
+    width: fit-content;
+    max-width: 700px;
     height: 170px;
     padding: 20px;
     margin: 20px 0px;
@@ -82,6 +83,7 @@
     background-color: #ECF0F1;
     text-align: center;
     color: var(--primary);
+    font-size: 0.8em;
 }
 
 .box {
@@ -100,6 +102,15 @@
 
 .identificacao-autorizacao {
     text-align: left;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    text-align: center;
 }
 
 .buttons button {
@@ -128,13 +139,13 @@
 }
 
 #button-aprovar:hover {
-    background-color: #FFFFFF;
+    background-color: var(--primary);
     color: #75F472;
     transition: ease-in-out 0.2s;
 }
 
 #button-rejeitar:hover {
-    background-color: #FFFFFF;
+    background-color: var(--primary);
     color: #F47272;
     transition: ease-in-out 0.2s;
 }
@@ -152,7 +163,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 90vw;
         height: 140vh;
         padding: 20px;
@@ -230,6 +241,11 @@
 
     .buttons {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        text-align: center;
     }
+    
 }

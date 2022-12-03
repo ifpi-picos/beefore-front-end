@@ -127,6 +127,10 @@ input:-webkit-autofill:focus {
     opacity: 100%;
 }
 
+#button-confirm {
+    width: 5em;
+}
+
 #button-confirm:hover, #button-confirmar:hover {
     background-color: #FFFFFF;
     color: var(--primary);
