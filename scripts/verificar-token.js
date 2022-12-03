@@ -1,28 +1,32 @@
 const apiURL = document.location.host != "beefore.netlify.app" ? "http://localhost:3001" : "https://beefore.kamiapp.com.br"
 
-if (window.localStorage.getItem("dev") == "true" || document.location.host != "127.0.0.1:5500") {
-    try {
-        const res = await fetch(apiURL + "/auth/token", {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': window.localStorage.getItem('token')
-            }
-        })
+try {
+    const res = await fetch(apiURL + "/auth/token", {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": window.localStorage.getItem("token")
+        }
+    })
 
-        if (res.status != 200) {
-            document.location.href = "/"
-        }
-        else if (res.status == 200) {
-            const data = await res.json()
-            window.localStorage.setItem("token", data.token)
-        }
-    }
-    catch (err) {
+    if (res.status != 200) {
+        window.localStorage.removeItem("token")
         document.location.href = "/"
     }
+    else if (res.status == 200) {
+        const data = await res.json()
+        window.localStorage.setItem("token", data.token)
+
+        const coordinatorOnly = document.getElementById("coordinator-only")
+
+        if(coordinatorOnly && data.user.type != "Coordinator"){
+            document.location.href = "/"
+        }
+    }
 }
-else {
-    document.querySelector("main").style.display = "flex"
+catch (err) {
+    window.localStorage.removeItem("token")
+    document.location.href = "/"
 }
+

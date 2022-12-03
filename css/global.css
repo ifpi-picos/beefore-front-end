@@ -117,10 +117,12 @@ a {
         flex-direction: column;
     }
 
+    .user-info {
+        justify-content: space-evenly;
+    }
+
     .menu-mobile {
         display: block;
-        position: absolute;
-        right: 4vw;
     }
 
     .side-link-info {
@@ -140,9 +142,6 @@ a {
         width: 18%;
         border-radius: 100px;
         margin: 0;
-        position: relative;
-        display: block;
-        right: 10vw;
     }
 
     .perfil {
@@ -150,15 +149,14 @@ a {
         padding: 0px;
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
     }
 
     #nome {
         margin: 0;
         font-size: small;
-        margin-left: 15px;
-        position: relative;
+        margin-left: 10px;
         display: block;
-        right: 10vw;
     }
 
     .nav-list {
