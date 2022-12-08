@@ -10,7 +10,22 @@ const responseText = document.getElementById("response-text")
 
 const loading = document.getElementById("loading")
 
-if(window.localStorage.getItem("token")){
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+if (window.localStorage.getItem("token")) {
     document.location.href = "/dashboard.html"
 }
 
@@ -65,7 +80,15 @@ buttonLogin.addEventListener("click", () => {
                         const data = await res.json()
 
                         window.localStorage.setItem("token", data.token)
-                        return document.location.href = "/dashboard.html"
+
+                        let redirect = getCookie("redirect")
+                        if (redirect) {
+                            eraseCookie("redirect")
+                            return document.location.href = redirect
+                        }
+                        else {
+                            return document.location.href = "/dashboard.html"
+                        }
                     }
 
                     loading.style = "display:none"

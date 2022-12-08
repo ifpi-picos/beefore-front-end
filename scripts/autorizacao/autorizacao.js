@@ -9,7 +9,7 @@ const res = await fetch(apiURL + "/authorization/", {
     }
 })
 
-if (res.status == 200) {
+if (res.status == 200 || res.status == 404) {
     const data = await res.json()
 
     if (data.length > 0) {
@@ -113,7 +113,7 @@ if (res.status == 200) {
         title.innerText = "Nenhum item para ser autorizado"
     }
 }
-else if (res.status == 403) {
+else if (res.status == 401 || res.status == 403) {
     document.location.href = "/"
 }
 else {
