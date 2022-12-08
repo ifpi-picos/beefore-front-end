@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    overflow-y: none;
+    overflow-x: none;
+}
+
+.qrcode-text {
+    margin: 10px;
+    margin-top: none;
+}
+
+.qrcode-text h1 p {
+    margin: 10px;
+    color: var(--primary);
+}
+
+#qrcode {
+    width: auto;
+    max-height: 50%;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+#actionReg {
+    color: rgb(0, 148, 7);
+    font-weight: bold;
+}
