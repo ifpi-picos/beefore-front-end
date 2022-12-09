@@ -19,12 +19,14 @@ if (res.status == 200) {
     const user = await res.json()
 
     const inputNome = document.getElementById("input-preferencias-nome")
+    const inputCartao = document.getElementById("input-preferencias-cartao")
     const inputOcupacao = document.getElementById("input-preferencias-funcao")
     const inputImagem = document.getElementById("input-preferencias-imagem")
     const inputSenha = document.getElementById("input-preferencias-senha")
     const checkComprovante = document.getElementById("comprovante")
 
     inputNome.value = user.name
+    inputCartao.value = user.cardid
     inputOcupacao.value = user.occupation
     inputImagem.value = user.profileimage
 
@@ -44,6 +46,7 @@ if (res.status == 200) {
         const newUserInfo = {
             modify: {
                 name: inputNome.value != user.name ? inputNome.value : undefined,
+                cardid: inputCartao.value != user.cardid ? inputCartao.value : undefined,
                 occupation: inputOcupacao.value != user.occupation ? inputOcupacao.value : undefined,
                 profileimage: inputImagem.value != user.profileimage ? inputImagem.value : undefined,
                 password: inputSenha.value != "" ? inputSenha.value : undefined,
@@ -55,7 +58,7 @@ if (res.status == 200) {
             newUserInfo.modify.profileimage = undefined
         }
 
-        if (!newUserInfo.modify.name && !newUserInfo.modify.occupation && !newUserInfo.modify.password && !newUserInfo.modify.preferences && newUserInfo.modify.profileimage === undefined) {
+        if (!newUserInfo.modify.name && !newUserInfo.modify.cardid && !newUserInfo.modify.occupation && !newUserInfo.modify.password && !newUserInfo.modify.preferences && newUserInfo.modify.profileimage === undefined) {
             return
         }
 
@@ -69,6 +72,19 @@ if (res.status == 200) {
 
             responseTitle.innerHTML = "Nome inválido"
             responseText.innerHTML = "Preencha corretamente o campo para realizar o cadastro"
+
+            document.getElementById("button-confirm").addEventListener("click", () => {
+                response.style = "display:none;"
+                forms.style = "display:block;"
+            })
+        }
+        else if (newUserInfo.modify.cardid && !newUserInfo.modify.cardid.match(/(^(\d){10})$/g)) {
+            loading.style = "display:none"
+            response.style = "display:flex;"
+            forms.style = "display:none;"
+
+            responseTitle.innerHTML = "ID do cartão inválido"
+            responseText.innerHTML = "O ID do cartão são os últimos 10 dígitos do número na parte de trás do seu crachá"
 
             document.getElementById("button-confirm").addEventListener("click", () => {
                 response.style = "display:none;"
