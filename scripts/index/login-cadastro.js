@@ -193,7 +193,7 @@ buttonCriarConta.addEventListener("click", () => {
             forms.style = "display:none;"
 
             responseTitle.innerHTML = "ID do cartão inválido"
-            responseText.innerHTML = "O ID do cartão deve contém somente números e exatamente 10 digitos"
+            responseText.innerHTML = "O ID do cartão são os últimos 10 dígitos do número na parte de trás do seu crachá"
 
             document.getElementById("button-confirm").addEventListener("click", () => {
                 response.style = "display:none;"

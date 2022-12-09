@@ -52,7 +52,12 @@ if (res.status == 200) {
         return nI
     }
 
-    averageUsage = round(averageUsage)
+    try {
+        averageUsage = round(averageUsage)
+    }
+    catch (err) {
+        averageUsage = averageUsage.toFixed(1)
+    }
 
     if (averageUsage > 1) {
         type += "s"
@@ -61,7 +66,6 @@ if (res.status == 200) {
     actualUsageDisplay.innerText = `${data.actualUsage} de 12`
     mostUsedDayDisplay.innerText = `${mostUsedDay}`
     averageUsageDisplay.innerText = `${averageUsage} ${type}`
-
 
     const socket = io(apiURL, {
         extraHeaders: {
