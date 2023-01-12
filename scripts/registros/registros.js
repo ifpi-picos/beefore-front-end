@@ -64,4 +64,16 @@ if (res.status == 200) {
 else if (res.status == 404) {
     const title = document.querySelector(".container-registro .title h1")
     title.innerText = "Nenhum registro encontrado"
+
+    if (params.id) {
+        const info = document.createElement("div")
+        info.innerHTML = `<h3>Usuário: ${params.nome}</h3>
+            <button id="button-voltar">Voltar</button>`
+
+        document.querySelector(".container-registro .title").appendChild(info)
+
+        document.getElementById("button-voltar").addEventListener("click", () => {
+            document.location.href = `/registros-coordenador.html?query=${params.query}`
+        })
+    }
 }
