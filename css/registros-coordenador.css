@@ -123,6 +123,13 @@
     height: 2.2em;
 }
 
+.box-registro-coordenador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .input-icone {
     display: flex;
     flex-direction: row;
